@@ -42,11 +42,11 @@ public class AuthorSelect {
 			
 			// 4.결과처리
 			while(rs.next()) {
-			int authorID = rs.getInt("author_id");
+			int authorId = rs.getInt("author_id");
 			String authorName = rs.getNString("author_name");
 			String authorDesc = rs.getNString("author_desc");
 			
-			System.out.println(authorID + ", " + authorName + ", " + authorDesc);
+			System.out.println(authorId + ", " + authorName + ", " + authorDesc);
 			}
 		} catch (ClassNotFoundException e) {
 		    System.out.println("error: 드라이버 로딩 실패 - " + e);
