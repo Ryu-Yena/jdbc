@@ -27,7 +27,7 @@ public class BookSelectALL {
 		    query += " select b.book_id, ";
 		    query += " 		  b.title, ";
 		    query += " 		  b.pubs, ";
-		    query += " 		  b.pub_date, ";
+			query += " 		  to_char(b.pub_date, 'YYYY-MM-DD') pub_date, ";
 		    query += " 		  b.author_id, ";
 		    query += " 		  a.author_name, ";
 		    query += " 		  a.author_desc ";
@@ -41,7 +41,7 @@ public class BookSelectALL {
 		     select b.book_id,
        		 		b.title,
        		 		b.pubs,
-       		 		b.pub_date,
+       		 		to_char(pub_date, 'YYYY-MM-DD') pub_date, ";
        				b.author_id,
        				a.author_name,
        				a.author_desc
